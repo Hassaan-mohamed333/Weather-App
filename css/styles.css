@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-image: url("./imeag/gambar-wallpaper-gambar-wallpaper-desktop-5.jpg");
+    background-size: cover;
+    background-position: center center;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #00d2ff, #aebfd8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    max-width: 500px;
+    position: relative;
+    
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    color: #00d2ff;
+    transition: all 0.3s ease;
+    
+}
+
+.search-box input::placeholder {
+    color: #00d2ff;
+}
+
+.search-box input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.search-box button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.search-box button:hover {
+    color: #00d2ff;
+}
+
+.weather-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.card .day {
+    font-size: 1.2rem;
+    color: #00d2ff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card .date {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+.card .weather-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+}
+
+.card .temp {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card .description {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+.card .details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card .detail-item {
+    text-align: center;
+}
+
+.card .detail-item i {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #00d2ff;
+}
+
+.card .detail-item span {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    display: none;
+}
+
+.error-message {
+    text-align: center;
+    color: #ff6b6b;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    display: none;
+}
+
+.get-location {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.get-location button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.get-location button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .weather-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+} 

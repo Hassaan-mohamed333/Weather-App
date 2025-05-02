@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <title>Weather App</title>
+  
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather App</h1>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="get-location">
+            <button id="location-btn">
+                <i class="fas fa-map-marker-alt"></i> Use my location
+            </button>
+        </div>
+
+        <div id="loading" class="loading">
+            <i class="fas fa-spinner fa-spin"></i> Loading...
+        </div>
+
+        <div id="error-message" class="error-message"></div>
+
+        <div class="weather-cards" id="weather-cards">
+        </div>
+    </div>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
