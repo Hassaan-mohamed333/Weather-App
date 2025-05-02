@@ -72,9 +72,10 @@ header h1 {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    background: transparent;
+    background: #00d2ff;
     border: none;
-    color: white;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
     font-size: 20px;
     cursor: pointer;
     padding: 10px;
@@ -82,6 +83,10 @@ header h1 {
 
 .search-box button:hover {
     color: #00d2ff;
+}
+#location-btn {
+   background-color: #00d2ff;
+
 }
 
 .weather-cards {
